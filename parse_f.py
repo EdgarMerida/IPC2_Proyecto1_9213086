@@ -28,7 +28,7 @@ for mat in root:
         for row in mat:
             atributoM = row.attrib
             
-            l.insertar(ind, atributoM['x'], atributoM['y'], row.text)
+            l.insertar(ind, int(atributoM['x']), int(atributoM['y']), int(row.text))
         print('')
         ind += 1
 

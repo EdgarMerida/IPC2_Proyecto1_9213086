@@ -18,7 +18,7 @@ class lista:
         if self.inicio != None:
             aux = self.inicio
             while aux != None:
-                print(str(aux.getId()), str(aux.getRow()), str(aux.getCol()),int(aux.dato))
+                print(int(aux.getId()), int(aux.getRow()), int(aux.getCol()),int(aux.dato))
                 aux = aux.getSiguiente()
     
     def modificar(self, id, nombre):
