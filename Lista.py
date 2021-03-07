@@ -14,13 +14,6 @@ class lista:
             self.fin.setSiguiente(nuevo)
             self.fin = nuevo
 
-    def recorrer(self):
-        if self.inicio != None:
-            aux = self.inicio
-            while aux != None:
-                print(int(aux.getId()), int(aux.getRow()), int(aux.getCol()),int(aux.dato))
-                aux = aux.getSiguiente()
-    
     def modificar(self, id, nombre):
         if self.inicio != None:
             aux = self.inicio
@@ -49,3 +42,38 @@ class lista:
                     aux2 = aux
                     aux = aux.getSiguiente()
 
+    def recorrer(self):
+        if self.inicio != None:
+            aux = self.inicio
+            while aux != None:
+                print(int(aux.getId()), int(aux.getRow()), int(aux.getCol()),int(aux.dato))
+                aux = aux.getSiguiente()
+
+
+    def buscar(self, row, col):
+        if self.inicio != None:
+            aux = self.inicio
+            while aux != None:
+                if aux.getRow() == row and aux.getCol() == col:
+                    print(int(aux.getRow()), int(aux.getCol()),int(aux.dato))                    
+                aux = aux.getSiguiente()
+
+
+    def ordenar(self, row, col):
+        if self.inicio != None:
+            aux = self.inicio
+            while aux != None:
+                if aux.getRow() == row and aux.getCol() == col:
+                    print(int(aux.getRow()), int(aux.getCol()),int(aux.dato))
+                    self.insertar(aux.getId(), int(aux.getRow()), int(aux.getCol()),int(aux.dato))
+                aux = aux.getSiguiente()
+"""
+    def modificar(self, id, nombre):
+        if self.inicio != None:
+            aux = self.inicio
+            while aux != None:
+                if aux.getId() == id:
+                    aux.setNombre(nombre)
+                    break
+                aux = aux.getSiguiente()
+"""
